@@ -71,8 +71,12 @@ function totalPopulation (obj) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
-
+function ingredients(obj) {
+  const {carb, fat, protein} = obj;
+  let food =[];
+  food.push(carb, fat, protein);
+  return food;
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -89,8 +93,9 @@ function totalPopulation (obj) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
-
+function largeNumbers ({first, second, third}) {
+  return Math.min(first, second, third);
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -101,6 +106,15 @@ function totalPopulation (obj) {
   Find the longest array and return that array.
 */
 
-//Code Here
+function numberGroups ({a, b, c}) {
+  if(a.length >= b.length && a.length >= c.length) {
+    return a;
+  } else if(b.length >= a.length && b.length >= c.length) {
+    return b;
+  } else {
+    return c;
+  }
+
+}
 
 
