@@ -79,9 +79,15 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 function removeDuplicates() {
-
+  for(var i = 0; i < workplaceAccidents.length; i++) {
+    for(var j = i + 1; j < workplaceAccidents.length; j++) {
+      if(workplaceAccidents[i] === workplaceAccidents[j]) {
+        workplaceAccidents.splice(i, 1);
+      }
+    }
+  }
+  return workplaceAccidents;
 }
-
 
 
 ////////// PROBLEM 3 //////////
@@ -152,8 +158,8 @@ var myCar = {
 
 function recordCleaner() {
 for(var i = 0; i < myCar.accidents.length; i++) {
-  if(myCar.accidents.atFaultForAccident === true) {
-    myCar.accidents.atFaultForAccident = false;
+  if(myCar.accidents[i].atFaultForAccident === true) {
+    myCar.accidents[i].atFaultForAccident = false;
   }
  } 
 }
