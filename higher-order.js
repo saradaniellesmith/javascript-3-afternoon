@@ -89,8 +89,7 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 
 //Code Here
 
-// let myStrongest = 
-
+let myStrongest = monstersInYourPocket.filter(element => element["CP"] > 200);
 
 
 ////////// PROBLEM 5 //////////
@@ -106,7 +105,9 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
   Use a high order method to get sum of all the order totals
 */
 
-// let ordersTotal = 
+let ordersTotal = orders.map(function(current, index, array){
+  return (current.price *(1 + current.tax));
+})
 
 
 ////////// PROBLEM 6 //////////
@@ -125,6 +126,11 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-// let bobsTotal = 
+let bobsTotal = purchases.reduce(function(acc, item) {
+  if(item.owner === "Bob") {
+    return acc + item.price
+  }
+  return acc;
+}, 0)
 
 

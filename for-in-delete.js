@@ -166,6 +166,7 @@ function removeBig(obj) {
   return obj;
 }
 
+removeBig(deleteTheBigNumbers);
 
 ////////// PROBLEM 7 //////////
 
